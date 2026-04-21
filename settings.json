@@ -1,0 +1,21 @@
+{
+    "vim.handleKeys": {
+        "<C-h>": false
+    },
+    "workbench.editor.wrapTabs": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": true,
+        "scminput": false
+    },
+    "editor.renderWhitespace": "none",
+    "workbench.colorTheme": "One Monokai",
+    "chat.tools.terminal.autoApprove": {
+        "/^cmd /c \"dir /s /b d:\\\\WS\\\\mdtest\\\\build\\\\_deps\\\\catch2-src\\\\extras\\\\\\*\\.cmake 2>nul\"$/": {
+            "approve": true,
+            "matchCommandLine": true
+        }
+    },
+    "cmake.showNotAllDocumentsSavedQuestion": false
+}
