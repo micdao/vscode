@@ -1,0 +1,23 @@
+{
+  "SHS confidential python": {
+    "prefix": "shs_py_confidential_header",
+    "description": "Insert a Siemens Healthineers confidential header",
+    "body": [
+      "#  ------------------------------------------------------------------------------",
+      "#  Copyright (C) Siemens Healthineers 2026.",
+      "#  All Rights Reserved. Confidential.",
+      "#  ------------------------------------------------------------------------------"
+    ]
+  },
+  "SHS confidential cpp": {
+    "prefix": "shs_cpp_confidential_header",
+    "scope": "cpp",
+    "description": "Insert a Siemens Healthineers confidential header",
+    "body": [
+      "// ------------------------------------------------------------------------------",
+      "// Copyright (C) Siemens Healthineers 2026.",
+      "// All Rights Reserved. Confidential.",
+      "// ------------------------------------------------------------------------------"
+    ]
+  }
+}

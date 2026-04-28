@@ -1,6 +1,10 @@
 // Place your key bindings in this file to override the defaults
 [
   {
+    "key": "ctrl+alt+i",
+    "command": "editor.action.toggleInlayHints"
+  },
+  {
     "key": "alt+left",
     "command": "workbench.action.navigateBack"
   },

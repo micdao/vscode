@@ -1,6 +1,7 @@
 {
     "vim.handleKeys": {
-        "<C-h>": false
+        "<C-h>": false,
+        "<C-A-i>": false
     },
     "workbench.editor.wrapTabs": true,
     "github.copilot.enable": {
@@ -17,5 +18,24 @@
             "matchCommandLine": true
         }
     },
-    "cmake.showNotAllDocumentsSavedQuestion": false
+    "cmake.showNotAllDocumentsSavedQuestion": false,
+    // Disable Microsoft IntelliSense completely
+    "C_Cpp.intelliSenseEngine": "Disabled",
+
+    // Optional: also disable fallback features
+    "C_Cpp.autocomplete": "Disabled",
+    "C_Cpp.errorSquiggles": "Disabled",
+
+    // Use clangd as the language server
+    // "clangd.path": "c:\\Users\\z004fksz\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\22.1.0\\clangd_22.1.0\\bin\\clangd.exe",
+    "clangd.arguments": [
+        "--background-index",
+        "--clang-tidy",
+        "--completion-style=detailed",
+        "--header-insertion=never"
+    ],
+
+    // Optional but useful
+    "editor.semanticHighlighting.enabled": true,
+    "clangd.path": "c:\\Users\\z004fksz\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\22.1.0\\clangd_22.1.0\\bin\\clangd.exe"
 }
