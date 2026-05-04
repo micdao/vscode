@@ -1,0 +1,13 @@
+# Ignore everything in this folder by default.
+/*
+
+# Keep the curated VS Code user config.
+!/.gitignore
+!/README.md
+!/extensions.txt
+!/keybindings.json
+!/settings.json
+!/.vscode/
+!/.vscode/tasks.json
+!/snippets/
+!/snippets/shs.code-snippets
