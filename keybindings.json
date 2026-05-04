@@ -1,9 +1,10 @@
-// Place your key bindings in this file to override the defaults
 [
+  // mostly for overriding vim
   {
     "key": "ctrl+alt+i",
     "command": "editor.action.toggleInlayHints"
   },
+  // making windows and linux consistent
   {
     "key": "alt+left",
     "command": "workbench.action.navigateBack"

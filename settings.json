@@ -1,32 +1,44 @@
 {
+    // Editor
+    "editor.renderWhitespace": "none",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+
+    // Workbench
+    "workbench.colorTheme": "One Monokai",
+    "workbench.editor.wrapTabs": true,
+
+    // Vim
     "vim.handleKeys": {
         "<C-h>": false,
         "<C-A-i>": false
     },
-    "workbench.editor.wrapTabs": true,
+
+    // Copilot
     "github.copilot.enable": {
         "*": true,
         "plaintext": false,
         "markdown": true,
         "scminput": false
     },
-    "editor.renderWhitespace": "none",
-    "workbench.colorTheme": "One Monokai",
+
+    // Chat
     "chat.tools.terminal.autoApprove": {
         "/^cmd /c \"dir /s /b d:\\\\WS\\\\mdtest\\\\build\\\\_deps\\\\catch2-src\\\\extras\\\\\\*\\.cmake 2>nul\"$/": {
             "approve": true,
             "matchCommandLine": true
         }
     },
+
+    // CMake
     "cmake.showNotAllDocumentsSavedQuestion": false,
-    // Disable Microsoft IntelliSense completely
-    "C_Cpp.intelliSenseEngine": "Disabled",
 
-    // Optional: also disable fallback features
-    "C_Cpp.autocomplete": "Disabled",
-    "C_Cpp.errorSquiggles": "Disabled",
+    // C/C++
+    "C_Cpp.intelliSenseEngine": "disabled", // MS extensions are not working well, disable
+    "C_Cpp.autocomplete": "disabled",
+    "C_Cpp.errorSquiggles": "disabled",
 
-    // Use clangd as the language server
+    // clangd
     // "clangd.path": "c:\\Users\\z004fksz\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\22.1.0\\clangd_22.1.0\\bin\\clangd.exe",
     "clangd.arguments": [
         "--background-index",
@@ -34,8 +46,6 @@
         "--completion-style=detailed",
         "--header-insertion=never"
     ],
-
-    // Optional but useful
-    "editor.semanticHighlighting.enabled": true,
+    /// TODO: change to PATH variable
     "clangd.path": "c:\\Users\\z004fksz\\AppData\\Roaming\\Code\\User\\globalStorage\\llvm-vs-code-extensions.vscode-clangd\\install\\22.1.0\\clangd_22.1.0\\bin\\clangd.exe"
 }
