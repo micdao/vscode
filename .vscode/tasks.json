@@ -1,0 +1,31 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Backup VS Code extensions",
+			"type": "shell",
+			"command": "",
+			"windows": {
+				"command": "$codeCli = Join-Path (Split-Path '${execPath}') 'bin\\code.cmd'; & $codeCli --list-extensions | Set-Content '${workspaceFolder}\\extensions.txt'"
+			},
+			"linux": {
+				"command": "\"$(dirname '${execPath}')/bin/code\" --list-extensions > '${workspaceFolder}/extensions.txt'"
+			},
+			"problemMatcher": [],
+			"group": "none"
+		},
+		{
+			"label": "Restore VS Code extensions",
+			"type": "shell",
+			"command": "",
+			"windows": {
+				"command": "$codeCli = Join-Path (Split-Path '${execPath}') 'bin\\code.cmd'; if (Test-Path '${workspaceFolder}\\extensions.txt') { Get-Content '${workspaceFolder}\\extensions.txt' | ForEach-Object { & $codeCli --install-extension $_ } } else { Write-Error 'extensions.txt not found in workspace root.' }"
+			},
+			"linux": {
+				"command": "code_cli=\"$(dirname '${execPath}')/bin/code\"; if [ -f '${workspaceFolder}/extensions.txt' ]; then while IFS= read -r ext; do \"$code_cli\" --install-extension \"$ext\"; done < '${workspaceFolder}/extensions.txt'; else echo 'extensions.txt not found in workspace root.'; exit 1; fi"
+			},
+			"problemMatcher": [],
+			"group": "none"
+		}
+	]
+}
